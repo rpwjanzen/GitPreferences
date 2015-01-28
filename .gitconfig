@@ -1,0 +1,41 @@
+[push]
+	default = simple
+[user]
+	name = Ryan Janzen
+	email = ryanj@pandell.com
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	shash = stash
+	sash = stash
+	fixup = commit --amend --no-edit
+	lgo = log
+	ocmmit = commit
+	meregtool = mergetool
+	brach = branch
+	stasdh = stash
+	sty = status
+	commti = commit
+	comiit = commit
+	commi = commit
+	search = "rev-list -n 1 HEAD -- "
+	lof = log
+	puhs = push
+	rebaes = rebase
+	psuh = push
+	mregertool = mergetool
+	fetgch = fetch
+	commie = commit
+	ffetch = fetch
+	mregetool = mergetool
+	rebae = rebase
+	conifig = config
+[rebase]
+	autosquash = true
+[merge]
+	tool = p4merge
+[mergetool]
+	keepBackup = false
+[mailmap]
+	file = c:/Users/ryanj/.mailmap

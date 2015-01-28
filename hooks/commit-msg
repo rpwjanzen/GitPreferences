@@ -1,0 +1,2 @@
+#!/bin/sh
+powershell.exe -ExecutionPolicy RemoteSigned -File '.git\hooks\pre-commit.ps1' $1
