@@ -10,6 +10,7 @@
 	shash = stash
 	sash = stash
 	fixup = commit --amend --no-edit
+	fethc = fetch
 	lgo = log
 	ocmmit = commit
 	meregtool = mergetool
@@ -19,10 +20,13 @@
 	commti = commit
 	comiit = commit
 	commi = commit
+	commmit = commit
 	search = "rev-list -n 1 HEAD -- "
 	lof = log
 	puhs = push
 	rebaes = rebase
+	rebave = rebase
+	revase = rebase
 	psuh = push
 	mregertool = mergetool
 	fetgch = fetch
@@ -33,6 +37,8 @@
 	conifig = config
 	reabse = rebase
 	dfii = diff
+	comit = commit
+	cvommit = commit
 [rebase]
 	autosquash = true
 [merge]
