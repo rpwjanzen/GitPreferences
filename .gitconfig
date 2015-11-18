@@ -28,6 +28,7 @@
 	rebave = rebase
 	revase = rebase
 	psuh = push
+	pushj = push
 	mregertool = mergetool
 	fetgch = fetch
 	commie = commit
