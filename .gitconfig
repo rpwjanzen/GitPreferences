@@ -6,56 +6,77 @@
 [alias]
 	co = checkout
 	st = status
-	br = branch
-	shash = stash
-	sash = stash
-	fixup = commit --amend --no-edit
-	fethc = fetch
-	lgo = log
-	ocmmit = commit
-	meregtool = mergetool
-	brach = branch
-	stasdh = stash
 	sty = status
+	br = branch
+	search = "rev-list -n 1 HEAD -- "
+	fixup = commit --amend --no-edit	
+	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !git lg1
+	brach = branch
+	ocmmit = commit
 	commti = commit
 	comiit = commit
 	commi = commit
 	commmit = commit
-	search = "rev-list -n 1 HEAD -- "
+	comit = commit
+	cvommit = commit
+	commie = commit
+	conifig = config
+	dfii = diff
+	idff = diff
+	fethc = fetch
+	fetgch = fetch
+	ffetch = fetch
+	lgo = log
 	lof = log
+	meregtool = mergetool
+	mregetool = mergetool
+	mregertool = mergetool
 	puhs = push
+	psuh = push
+	pushj = push
 	rebaes = rebase
 	rebave = rebase
 	revase = rebase
-	psuh = push
-	pushj = push
-	mregertool = mergetool
-	fetgch = fetch
-	commie = commit
-	ffetch = fetch
-	mregetool = mergetool
-	rebae = rebase
-	conifig = config
 	reabse = rebase
-	dfii = diff
-	comit = commit
-	cvommit = commit
+	rebae = rebase
+	shash = stash
+	sash = stash
+	stasdh = stash
+	pusn = push
+	pushn = push
+	ad = add
+	renase = rebase
 [rebase]
 	autosquash = true
 [merge]
-	tool = p4merge
+	tool = semanticmerge
 [mergetool]
 	keepBackup = false
 [mailmap]
 	file = c:/Users/ryanj/.mailmap
 [diff]
-	guitool = p4merge
+	guitool = semanticdiff
 [core]
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	autocrlf = true
+[difftool "semanticdiff"]
+	cmd = C:/Users/ryanj/AppData/Local/PlasticSCM4/semanticmerge/semanticmergetool.exe -s \"$LOCAL\" -d \"$REMOTE\"
+	prompt = false
+[mergetool "semanticmerge"]
+	cmd = C:/Users/ryanj/AppData/Local/PlasticSCM4/semanticmerge/semanticmergetool.exe -s \"$REMOTE\" -d \"$LOCAL\" -b \"$BASE\" -r \"$MERGED\"
+	trustExitCode = true
+	prompt = false
+	keepBackup = false
 [mergetool "p4merge"]
 	path = C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe
 	cmd = \"C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [difftool "p4merge"]
 	path = C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe
 	cmd = \"C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe\" \"$LOCAL\" \"$REMOTE\"
+[color "status"]
+	changed = red normal bold
+[color "diff"]
+	old = red normal bold
+	new = green normal bold
