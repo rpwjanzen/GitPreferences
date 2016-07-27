@@ -36,6 +36,7 @@
 	puhs = push
 	psuh = push
 	pushj = push
+	puush = push
 	rebaes = rebase
 	rebave = rebase
 	revase = rebase
@@ -77,6 +78,7 @@
 	cmd = \"C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe\" \"$LOCAL\" \"$REMOTE\"
 [color "status"]
 	changed = red normal bold
+	untracked = red normal bold
 [color "diff"]
 	old = red normal bold
 	new = green normal bold
