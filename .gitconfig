@@ -2,7 +2,7 @@
 	default = simple
 [user]
 	name = Ryan Janzen
-	email = rpwjanzen@gmail.com
+	email = rpwjanzen+github@gmail.com
 [alias]
 	co = checkout
 	st = status
