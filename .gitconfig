@@ -76,9 +76,16 @@
 [difftool "p4merge"]
 	path = C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe
 	cmd = \"C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe\" \"$LOCAL\" \"$REMOTE\"
+[color "interactive"]
+	prompt = cyan normal bold
 [color "status"]
 	changed = red normal bold
 	untracked = red normal bold
+	nobranch = red normal bold
+	added = green normal bold
 [color "diff"]
 	old = red normal bold
 	new = green normal bold
+[color "branch"]
+	current = green normal bold
+	remote = red normal bold
