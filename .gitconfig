@@ -82,23 +82,12 @@
 [mergetool]
     prompt = false
     keepBackup = false
-[mergetool "p4merge"]
-    cmd = /home/vmuser/p4v-2015.2.1315639/bin/p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-    keepTemporaries = false
-    trustExitCode = false
-    keepBackup = false
 [mergetool "mymeld"]
     cmd = meld $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge
 [diff]
-    tool = p4merge
-    #indentHeuristic = true
+    tool = meld
 [difftool]
     prompt = false
-    keepBackup = false
-[difftool "p4merge"]
-    cmd = /home/vmuser/p4v-2015.2.1315639/bin/p4merge "$LOCAL" "$REMOTE"
-    keepTemporaries = false
-    trustExitCode = false
     keepBackup = false
 [commit]
     verbose = true
