@@ -1,91 +1,108 @@
-[push]
-	default = simple
 [user]
-	name = Ryan Janzen
-	email = rpwjanzen+github@gmail.com
+    name = Ryan Janzen
+    email = rpwjanzen+github@gmail.com
+[apply]
+    whitespace = fix
+[push]
+    default = simple
 [alias]
-	co = checkout
-	st = status
-	sty = status
-	br = branch
-	search = "rev-list -n 1 HEAD -- "
-	fixup = commit --amend --no-edit	
-	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	lg = !git lg1
-	brach = branch
-	ocmmit = commit
-	commti = commit
-	comiit = commit
-	commi = commit
-	commmit = commit
-	comit = commit
-	cvommit = commit
-	commie = commit
-	conifig = config
-	dfii = diff
-	idff = diff
-	fethc = fetch
-	fetgch = fetch
-	ffetch = fetch
-	lgo = log
-	lof = log
-	meregtool = mergetool
-	mregetool = mergetool
-	mregertool = mergetool
-	puhs = push
-	psuh = push
-	pushj = push
-	puush = push
-	rebaes = rebase
-	rebave = rebase
-	revase = rebase
-	reabse = rebase
-	rebae = rebase
-	shash = stash
-	sash = stash
-	stasdh = stash
-	pusn = push
-	pushn = push
-	ad = add
-	renase = rebase
+    nl = log --pretty=format:'%h : %an(%ad --- %cd) - %s' --graph --date=short
+    co = checkout
+    st = status
+    sty = status
+    br = branch
+    search = "rev-list -n 1 HEAD -- "
+    fixup = commit --amend --no-edit
+    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !git lg1
+    brach = branch
+    ocmmit = commit
+    commti = commit
+    comiit = commit
+    commi = commit
+    commmit = commit
+    comit = commit
+    cvommit = commit
+    commie = commit
+    conifig = config
+    dfii = diff
+    idff = diff
+    fethc = fetch
+    fetgch = fetch
+    ffetch = fetch
+    lgo = log
+    lof = log
+    meregtool = mergetool
+    mregetool = mergetool
+    mregertool = mergetool
+    puhs = push
+    psuh = push
+    pushj = push
+    puush = push
+    rebaes = rebase
+    rebave = rebase
+    revase = rebase
+    reabse = rebase
+    rebae = rebase
+    shash = stash
+    sash = stash
+    stasdh = stash
+    pusn = push
+    pushn = push
+    ad = add
+    renase = rebase
+    reste = reset
+    fetchh = fetch
+    fa = fetch --all
+    pu = pull --ff-only
+    oc = checkout
+    commt = commit
+    lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(white)%s%C(reset) %C(yellow)- %an%C(reset)'
+    logcr = log --graph --abbrev-commit --decorate --format=format:'HERO-%C(white)%s%C(reset) (%h)'
+    lgcr = log --graph --abbrev-commit --decorate --format=format:'HERO-%C(white)%s%C(reset) (%h)'
+    ommit = commit
+    mf = merge --no-ff
+    bb = log -p -M --follow --stat --
 [rebase]
-	autosquash = true
-[merge]
-	tool = semanticmerge
+    autosquash = true
+    autostash = true
 [mergetool]
-	keepBackup = false
-[mailmap]
-	file = c:/Users/ryanj/.mailmap
-[diff]
-	guitool = semanticdiff
+    keepBackup = false
+[fetch]
+    prune = true
 [core]
-	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
-	autocrlf = true
-[difftool "semanticdiff"]
-	cmd = C:/Users/ryanj/AppData/Local/PlasticSCM4/semanticmerge/semanticmergetool.exe -s \"$LOCAL\" -d \"$REMOTE\"
-	prompt = false
-[mergetool "semanticmerge"]
-	cmd = C:/Users/ryanj/AppData/Local/PlasticSCM4/semanticmerge/semanticmergetool.exe -s \"$REMOTE\" -d \"$LOCAL\" -b \"$BASE\" -r \"$MERGED\"
-	trustExitCode = true
-	prompt = false
-	keepBackup = false
+    editor = vim
+    excludesfile = ~/.gitignore
+[merge]
+    keepBackup = false
+    tool = mymeld
+    ff = no
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+    keepBackup = false
 [mergetool "p4merge"]
-	path = C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe
-	cmd = \"C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    cmd = /home/vmuser/p4v-2015.2.1315639/bin/p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[mergetool "mymeld"]
+    cmd = meld $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge
+[diff]
+    tool = p4merge
+    #indentHeuristic = true
+[difftool]
+    prompt = false
+    keepBackup = false
 [difftool "p4merge"]
-	path = C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe
-	cmd = \"C:/Users/ryanj/Documents/Applications/Perforce/p4merge.exe\" \"$LOCAL\" \"$REMOTE\"
-[color "interactive"]
-	prompt = cyan normal bold
-[color "status"]
-	changed = red normal bold
-	untracked = red normal bold
-	nobranch = red normal bold
-	added = green normal bold
-[color "diff"]
-	old = red normal bold
-	new = green normal bold
-[color "branch"]
-	current = green normal bold
-	remote = red normal bold
+    cmd = /home/vmuser/p4v-2015.2.1315639/bin/p4merge "$LOCAL" "$REMOTE"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[commit]
+    verbose = true
+[gc]
+    autoDetach = false
+[pull]
+    ff = yes
